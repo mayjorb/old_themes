@@ -46,7 +46,7 @@
         <?php if ($title || $tabs || $action_links): ?>
           <header>
             <?php print render($title_prefix); ?>
-            <?php if ($title): ?><h1 id="page-title"><?php print $title; ?></h1> <!-- /page title -->
+            <?php if ($title && !$is_front): ?><h1 id="page-title"><?php print $title; ?></h1> <!-- /page title -->
             <?php endif; ?>
             <?php print render($title_suffix); ?>
             <?php print render($tabs); ?> <!-- /local task tabs -->
