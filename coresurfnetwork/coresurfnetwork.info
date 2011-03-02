@@ -74,7 +74,7 @@
   settings[extra_item_list_classes]        = 0
   settings[menu_item_span_elements]        = 0
   settings[layout_method]                  = '0'
-  settings[layout_width]                   = '960px'
+  settings[layout_width]                   = '1020px'
   settings[layout_sidebar_first_width]     = '240'
   settings[layout_sidebar_last_width]      = '240'
   settings[layout_enable_settings]         = 'on'
