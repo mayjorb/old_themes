@@ -1316,12 +1316,15 @@ div.region section#block-webform-client-block-3.block div.block-inner div.block-
 
 div.home-intro {
 	text-align: center;
+	text-transform: uppercase;
 	padding: 50px 0 10px 0;
 	font-size: 1.25em;
+	
 }
 
 div.home-date {
 	text-align: center;
+	text-transform: uppercase;
 	font-weight: bold;
 	font-size: 1.5em;
 	padding: 0 0 100px 0;
