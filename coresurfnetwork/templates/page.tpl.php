@@ -5,7 +5,7 @@
 
   <header id="header" class="clearfix">
     <div id="branding">
-      <?php if ($linked_site_logo): ?>
+      <?php if ($linked_site_logo && !$is_front): ?>
         <div id="logo"><?php print $linked_site_logo; ?></div>
       <?php endif; ?>
       <?php if ($site_name || $site_slogan): ?>
