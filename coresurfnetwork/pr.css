@@ -1304,3 +1304,38 @@ div.admin-panel,
   -webkit-border-radius: 2px;
   border-radius: 2px;
 }
+
+section#block-webform-client-block-3.block div.block-inner h2.block-title,
+#page.container footer#footer div#footer-inner.clearfix div.region div#block-block-1.block {
+	display: none;
+}
+
+div.region section#block-webform-client-block-3.block div.block-inner div.block-content article#article-3.article {
+	background-color: transparent;
+}
+
+div.home-intro {
+	text-align: center;
+	padding: 50px 0 10px 0;
+	font-size: 1.25em;
+}
+
+div.home-date {
+	text-align: center;
+	font-weight: bold;
+	font-size: 1.5em;
+	padding: 0 0 100px 0;
+}
+
+div.block-content article#article-3.article div.article-content div.field div.field-item h3 {
+		font-size: 1.5em;
+}
+
+div#webform-component-beta-invite-email.form-item label,
+div#webform-component-beta-invite-email.form-item label span.form-required {
+	color: #fff;
+}
+
+
+
+
