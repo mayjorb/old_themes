@@ -1305,6 +1305,9 @@ div.admin-panel,
   border-radius: 2px;
 }
 
+
+/* core customization */
+
 section#block-webform-client-block-3.block div.block-inner h2.block-title,
 #page.container footer#footer div#footer-inner.clearfix div.region div#block-block-1.block {
 	display: none;
@@ -1339,6 +1342,22 @@ div#webform-component-beta-invite-email.form-item label span.form-required {
 	color: #fff;
 }
 
+header#header {
+	background: url("images/header.png") no-repeat scroll left top transparent;
+}
 
+div#branding {
+	margin: 0 auto;
+  position: relative;
+	float: none;
+  width: 1020px;
+	background: url("images/header-tile.png") no-repeat scroll left top transparent;
+}
+
+div#page.container {
+	background-image: none;
+}
+
+/* end customization */
 
 
