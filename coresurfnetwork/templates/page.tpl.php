@@ -1,27 +1,30 @@
 <?php
 // $Id: page.tpl.php,v 1.1.2.18 2010/10/31 01:02:26 jmburnz Exp $
 ?>
+
+<header id="header" class="clearfix">
+  <div id="branding">
+    <?php if ($linked_site_logo && !$is_front): ?>
+      <div id="logo"><?php print $linked_site_logo; ?></div>
+    <?php endif; ?>
+    <?php if ($site_name || $site_slogan): ?>
+      <hgroup<?php if (!$site_slogan && $hide_site_name): ?> class="<?php print $visibility; ?>"<?php endif; ?>>
+        <?php if ($site_name): ?>
+          <h1 id="site-name"<?php if ($hide_site_name): ?> class="<?php print $visibility; ?>"<?php endif; ?>><?php print $site_name; ?></h1>
+        <?php endif; ?>
+        <?php if ($site_slogan): ?>
+          <h2 id="site-slogan"><?php print $site_slogan; ?></h2>
+        <?php endif; ?>
+      </hgroup>
+    <?php endif; ?>
+  </div>
+  <?php print render($page['header']); ?> <!-- /header region -->
+  <?php print render($page['menu_bar']); ?> <!-- /menu bar -->
+</header> <!-- /header -->
+
 <div id="page" class="container">
 
-  <header id="header" class="clearfix">
-    <div id="branding">
-      <?php if ($linked_site_logo && !$is_front): ?>
-        <div id="logo"><?php print $linked_site_logo; ?></div>
-      <?php endif; ?>
-      <?php if ($site_name || $site_slogan): ?>
-        <hgroup<?php if (!$site_slogan && $hide_site_name): ?> class="<?php print $visibility; ?>"<?php endif; ?>>
-          <?php if ($site_name): ?>
-            <h1 id="site-name"<?php if ($hide_site_name): ?> class="<?php print $visibility; ?>"<?php endif; ?>><?php print $site_name; ?></h1>
-          <?php endif; ?>
-          <?php if ($site_slogan): ?>
-            <h2 id="site-slogan"><?php print $site_slogan; ?></h2>
-          <?php endif; ?>
-        </hgroup>
-      <?php endif; ?>
-    </div>
-    <?php print render($page['header']); ?> <!-- /header region -->
-    <?php print render($page['menu_bar']); ?> <!-- /menu bar -->
-  </header> <!-- /header -->
+ 
 
   <?php print $breadcrumb; ?> <!-- /breadcrumb -->
   <?php print $messages; ?> <!-- /message -->
@@ -74,10 +77,12 @@
     </div>
   <?php endif; ?>
 
-  <?php if ($page['footer'] || $feed_icons): ?>
-    <footer id="footer"><div id="footer-inner" class="clearfix">
-      <?php print render($page['footer']); ?> <!-- /footer region -->
-    </div></footer> <!-- /footer/footer-inner -->
-  <?php endif; ?>
 
 </div> <!-- /page -->
+
+<?php if ($page['footer'] || $feed_icons): ?>
+  <footer id="footer"><div id="footer-inner" class="clearfix">
+    <?php print render($page['footer']); ?> <!-- /footer region -->
+  </div></footer> <!-- /footer/footer-inner -->
+<?php endif; ?>
+
