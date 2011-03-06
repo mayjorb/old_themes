@@ -3,9 +3,9 @@
 ?>
 
 <header id="header" class="clearfix">
-  <div id="branding">
+  <div id="branding" class="container">
     <?php if ($linked_site_logo && !$is_front): ?>
-      <div id="logo"><?php print $linked_site_logo; ?></div>
+      <div id="logo" class="container"><?php print $linked_site_logo; ?></div>
     <?php endif; ?>
     <?php if ($site_name || $site_slogan): ?>
       <hgroup<?php if (!$site_slogan && $hide_site_name): ?> class="<?php print $visibility; ?>"<?php endif; ?>>
@@ -85,4 +85,3 @@
     <?php print render($page['footer']); ?> <!-- /footer region -->
   </div></footer> <!-- /footer/footer-inner -->
 <?php endif; ?>
-
