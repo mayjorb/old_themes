@@ -1360,7 +1360,6 @@ div#branding.container {
 }
 
 
-
 div#page.container {
 	background-image: none;
 	min-height: 400px;
@@ -1408,6 +1407,10 @@ html {
 div.home-logo {
 	text-align: center;
 	padding-top: 10px;
+}
+
+div#content-column div.content-inner section#main-content header {
+	padding-left: 0;
 }
 
 /*
