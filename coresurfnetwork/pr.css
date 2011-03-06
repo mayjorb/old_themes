@@ -1330,7 +1330,7 @@ div.home-date {
 	text-transform: uppercase;
 	font-weight: bold;
 	font-size: 1.5em;
-	padding: 0 0 100px 0;
+	padding: 0 0 40px 0;
 }
 
 div.block-content article#article-3.article div.article-content div.field div.field-item h3 {
@@ -1342,21 +1342,76 @@ div#webform-component-beta-invite-email.form-item label span.form-required {
 	color: #fff;
 }
 
+/* 
 header#header {
-	background: url("images/header.png") no-repeat scroll left top transparent;
-}
+	background: transparent;
+	background-image: none;
+} */
 
-div#branding {
+div#branding.container {
 	margin: 0 auto;
   position: relative;
 	float: none;
-  width: 1020px;
-	background: url("images/header-tile.png") no-repeat scroll left top transparent;
+	background: transparent;
 }
+
+#branding {
+    width: 1020px;
+}
+
+
 
 div#page.container {
 	background-image: none;
 }
+
+div.columns-inner {
+ padding: 0 30px;
+}
+
+div#footer-inner.clearfix div.region div#block-block-1.block {
+	padding: 0;
+	margin: 0;
+}
+
+
+header#header.clearfix {
+	background: url("images/header-tile.png") repeat-x scroll left top #fff;
+	margin: 0;
+}
+
+/*#header {
+    background: url("header.png") no-repeat scroll left top transparent;
+}*/
+
+/*body {
+    background: url("images/bg-wall.png") repeat-x scroll left top #fff;
+    color: #555555;
+}*/
+
+body {
+    background: none repeat-x scroll left top #fff;
+}
+
+#logo {
+    display: block;
+    float: none;
+    overflow: hidden;
+    padding: 10px 0 0 40px;
+}
+
+html {
+	background: #EEECEC;
+}
+
+
+
+/*
+body {
+	background: #F4F5F6;
+	background-image: none;
+	color: #555555;
+} */
 
 /* end customization ˝git */
 
