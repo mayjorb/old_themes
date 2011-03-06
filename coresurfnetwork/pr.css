@@ -1339,7 +1339,7 @@ div.block-content article#article-3.article div.article-content div.field div.fi
 
 div#webform-component-beta-invite-email.form-item label,
 div#webform-component-beta-invite-email.form-item label span.form-required {
-	color: #fff;
+	color: #000;
 }
 
 /* 
@@ -1363,10 +1363,11 @@ div#branding.container {
 
 div#page.container {
 	background-image: none;
+	min-height: 400px;
 }
 
 div.columns-inner {
- padding: 0 30px;
+ padding: 20px 30px 30px 30px;
 }
 
 div#footer-inner.clearfix div.region div#block-block-1.block {
@@ -1397,14 +1398,17 @@ body {
     display: block;
     float: none;
     overflow: hidden;
-    padding: 10px 0 0 40px;
+    padding: 10px 0 0 30px;
 }
 
 html {
 	background: #EEECEC;
 }
 
-
+div.home-logo {
+	text-align: center;
+	padding-top: 10px;
+}
 
 /*
 body {
