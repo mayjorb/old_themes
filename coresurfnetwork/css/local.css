@@ -101,5 +101,7 @@ div#block-webform-client-block-1151.block div.inner div.content div#node-1151.no
   color: #fff;
 }
 
-
+div.view-content div.openlayers-views-map div#openlayers-container-openlayers-map-auto-id-0.openlayers-container {
+  float: right;
+}
 
