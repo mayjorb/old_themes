@@ -1075,3 +1075,7 @@ html.js body.article-type-core-company div#container div#header.clearfix div#hea
   float: right;
 }
 
+div.openlayers-views-map div#openlayers-container-openlayers-map-auto-id-1.openlayers-container {
+  border: 1px #BFBFBF solid;
+}
+
