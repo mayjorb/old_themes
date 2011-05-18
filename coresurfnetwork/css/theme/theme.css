@@ -188,9 +188,7 @@ a:focus {}
  *                 Header Elements
  **********************************************************/
 /* #header wraps #branding, #search-box-top and #header-blocks. */
-#header {
-    border: 1px solid red;
-}
+#header {}
 
 /* #branding wraps #logo, #site-name and #site-slogan. */
 #branding {
