@@ -11,7 +11,9 @@
  *                    HTML & Body
  **********************************************************/
 html {}
-body {}
+body {
+  font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+}
 
 /* Admin menu */
 body.admin-menu {}
@@ -20,12 +22,12 @@ body.admin-menu #container {}
 /**********************************************************
  *                 HTML Elements
  **********************************************************/
-h1 {}
-h2 {}
-h3 {}
-h4 {}
-h5 {}
-h6 {}
+h1 {font-family: Georgia, Palatino, "Palatino Linotype", "Book Antiqua", serif;}
+h2 {font-family: Georgia, Palatino, "Palatino Linotype", "Book Antiqua", serif;}
+h3 {font-family: Georgia, Palatino, "Palatino Linotype", "Book Antiqua", serif;}
+h4 {font-family: Georgia, Palatino, "Palatino Linotype", "Book Antiqua", serif;}
+h5 {font-family: Georgia, Palatino, "Palatino Linotype", "Book Antiqua", serif;}
+h6 {font-family: Georgia, Palatino, "Palatino Linotype", "Book Antiqua", serif;}
 
 p {}
 
@@ -123,7 +125,9 @@ a:focus {}
  *                       Regions
  **********************************************************/
 /* Leaderboard is a full width region at the very top of the page. */
-#leaderboard {}
+#leaderboard {
+  background: #cococo;
+}
 
 /* Header region is embedded in the header, floated between the logo/site_name
    and the search box. */
@@ -515,6 +519,7 @@ ul.links li.print_pdf a {}
 .page-article  {}
 .poll-article  {}
 .story-article {}
+.core_company-article {}
 
  /**
   * Custom Content Types
@@ -1012,3 +1017,61 @@ tr:first-child td.container {}
 #forum tr td.forum {}
 #forum tr td.forum .name {}
 #forum div.indent {}
+
+
+
+div.home-logo {
+  padding-top: 30px;
+  text-align: center;
+}
+
+div.home-intro {
+    font-size: 1.25em;
+    padding: 50px 0 10px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+div.home-date {
+    font-size: 1.5em;
+    font-weight: bold;
+    padding: 0 0 30px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+div#footer-message-wrapper.footer-message-wrapper {
+  background: #EEECEC;
+}
+
+div#footer-wrapper.footer-wrapper {
+  background: -moz-linear-gradient(-90deg, #8C909B, #EEECEC) repeat scroll 0 0 #8C909B;
+  border: none;
+}
+
+div#block-webform-client-block-1151.block div.inner h2.title {
+  color: #fff;
+  font-size: 125%;
+}
+
+div#block-webform-client-block-1151.block div.inner div.content div#node-1151.node div.inner div.content h3 {
+  color: #fff;
+  font-size: 115%;
+}
+
+div#webform-component-beta-invite-email.webform-component div#edit-submitted-beta-invite-email-wrapper.form-item label {
+  color: #000;
+}
+
+div#block-webform-client-block-1151.block div.inner div.content div#node-1151.node {
+  color: #fff;
+}
+
+div.view-content div.openlayers-views-map div#openlayers-container-openlayers-map-auto-id-0.openlayers-container {
+  float: right;
+}
+
+html.js body.article-type-core-company div#container div#header.clearfix div#header-region div.block div.block-inner div.content div.view div.view-content div.openlayers-views-map {
+  float: right;
+}
+
