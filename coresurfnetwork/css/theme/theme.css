@@ -188,10 +188,16 @@ a:focus {}
  *                 Header Elements
  **********************************************************/
 /* #header wraps #branding, #search-box-top and #header-blocks. */
-#header {}
+#header {
+    border: 1px solid red;
+}
 
 /* #branding wraps #logo, #site-name and #site-slogan. */
-#branding {}
+#branding {
+  float: left;
+  width: 300px;
+
+}
 
 /* Logo and Site Name wrapper. */
 .logo-site-name {}
@@ -201,7 +207,9 @@ h1.logo-site-name  {}
 
 /* Logo and Site Name wrapper DIV - normally applies to all internal pages,
    or where no title is set. */
-div.logo-site-name {}
+div.logo-site-name {
+  /*float: left;*/
+}
 
 /* DIV/strong combo when when title is set. */
 div.logo-site-name strong {}

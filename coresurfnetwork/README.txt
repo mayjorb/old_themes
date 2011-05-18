@@ -1,116 +1,84 @@
--- SUMMARY --
 
-This is a clone of Acquia Prosper
+  Installation and setup is strait forward, just follow the steps carefully:
 
-Acquia Prosper is an advanced Drupal theme, with a monochromatic look and clean lines.  It is designed as an Ubercart e-commerce theme but is extremely flexible for any type of site. 
-
-This theme is a subtheme of the Fusion Core base theme.  Acquia Prosper + Fusion is a little different from most Drupal themes you may be used to.  Positioning and block styles are controlled through Drupal's UI via the Skinr module, which is required if you want to actually use styles.  These configurable options give Acquia Prosper an unparalleled amount of flexibility and features.
-
-
--- REQUIREMENTS --
-
-Fusion Core:
-  http://drupal.org/project/fusion
-
-Skinr:
-  http://drupal.org/project/skinr
+  UPGRADING
+  If you are upgrading from 6.x-1.x you must first remove all the 6.x-1.x
+  files before installing 6.x-2.x.
 
 
--- INSTALLATION --
+  INSALLATION
+  1) Copy and paste the included starter subtheme (adaptivetheme_subtheme) 
+     to your sites/all/themes folder or where ever you are installing your
+     new subtheme.
 
-* Download both Acquia Prosper and Fusion (http://drupal.org/project/fusion)
-
-* Unpack them as usual within your themes folder.  You'll see two themes in the Fusion folder -- Fusion Core (the base theme), and Fusion Starter (a commented starter theme for creating your own subthemes)
-
-* Enable Fusion Core and Acquia Prosper on your themes page on example.com/admin/build/themes
-
-* Set Acquia Prosper as your default theme
-
-* Download and enable the Skinr module
-
-   - The dev snapshot is currently recommended for the most up-to-date version: http://ftp.drupal.org/files/projects/skinr-6.x-1.x-dev.tar.gz
-
-* You may need to give your administrator role Skinr permissions on example.com/admin/user/permissions
+     For multisite installations you can place the base theme in sites/all/themes,
+     and your subtheme can go in sites/mysite.com/themes.
 
 
--- CONFIGURATION --
-
-* You can control many settings on Acquia Prosper's theme settings page: example.com/admin/build/themes/settings/acquia_prosper
-   - Settings include menus, fixed vs fluid page width, sidebar widths, typography, search results, and administrator/developer helper features
-
-* Superfish dropdown menus can be enabled by selecting "Expanded" next to the parent menu item in your menu configuration
-
-* Go to your Blocks page at example.com/admin/build/block and place blocks into regions as desired, save your settings
-
-* When hovering your cursor over blocks, a gear icon will appear -- you can use this to get to the block configuration page for that specific block
-
-* On each block's configuration page, a "Skinr" section will appear, where you can set block styles
-
-  NOTE: Currently Skinr's user interface is in a beta state, and only supports checkboxes at this time. Improvements are coming soon, but in the meantime, you will need to exercise some self control and not enable multiple conflicting styles at the same time. For example, only enable a single width option and a single alignment option at once. Many of the styles may also not layer well.
-
-* Use these width and positioning options for blocks to configure your layout
-
-* Use the style options to set up different visual styles for different blocks
+  2) Rename the theme folder and info file to your preferred theme name, 
+     then open up the info file and change the name and description.
 
 
--- UBERCART FEATURES --
-
-If you are using the Ubercart e-commerce suite, this theme has lots of enhanced features for your site!
-
-* Custom product template and styling via a node-product.tpl.php file, which themes the product images, price, attributes, product info, and add to cart form
-
-* A "simple comments" style which is ideal for user product reviews using the Fivestar module
-
-* Custom icon for your shopping cart
-
-* Styles for shopping cart block on light or dark backgrounds
-
-* Custom styling for product subcategory links in catalog
-
-* Themed catalog grid view
-
-* Emphasized theming of key customer action buttons, such as Checkout and Review Order, and de-emphasis of "cancel" links
-
-* Custom theming of cart and checkout pages
+  3) Open up your subthemes template.php file and search/replace all instances 
+     of "adaptivetheme_subtheme" with your new theme name.
 
 
--- EXAMPLES --
+  4) Open up your subthemes theme-settings.php file and locate these lines: 
 
-The following are recommended block placements/styles and other settings for Acquia Prosper to get you started exploring what Fusion can do!
+       (line 19) function adaptivetheme_subtheme_settings($saved_settings) {
+       (line 22)   $defaults = adaptivetheme_theme_get_default_settings('adaptivetheme_subtheme');
 
-* Set the "Acquia Prosper: Gray rounded title background, list styling" style for menu blocks in your sidebar
+       a) You must re-name the function to match your theme name, then...
+       b) replace the instance of ('adaptivetheme_subtheme') with ('YourThemeName').
 
-* Add the Ubercart shopping cart block to the Header region, give it a width of 4 units, set the block to float to the right, and give it the "Acquia Prosper: Shopping cart - Dark background" block style
+       It should look like this when you are done:
 
-* Try adding a menu such as your primary links block to the Footer region, and set it to use either the "Single line inline menu with separators" style for a one level menu, or "Multi-column menu with headers" style for a nested menu
-
-* Edit a content type with commenting enabled, go to the Skinr section, and select "Acquia Prosper: Comments - edgy" for the comment style for special comment theming
-
-* Add the user login block to the Header Top region, and set it to the "Horizontal user login" style for a sleek login form
-
-* Add some promotional text to a block in the Preface Bottom region, and give it the "Acquia Prosper: Gradient background with padding and thick border" for a prominent callout style
-
-* Use the Quicktabs module (http://drupal.org/project/quicktabs) to create a jQuery tabbed block, and set that block's style to "Acquia Prosper: Tabbed block" for custom matching tabs
-
-* You can also set many of these styles on Views, content types, or Panels!
+       (line 19) function YourThemeName_settings($saved_settings) {
+       (line 22)   $defaults = adaptivetheme_theme_get_default_settings('YourThemeName');
 
 
--- CREDITS --
+  5) If you want to use the color schemes feature open up the .info file and 
+     scroll to the bottom and change settings[color_enable_schemes] = 'off' to 'on'.
+     If you make this change after you have enabled the theme you must click 
+     "Reset to defaults" for your subtheme for the color settings to work.
+ 
+     Now you can enable the theme as per usual.
 
-This theme has been made possible by:
 
-* TOP NOTCH THEMES
-  Concept, theming, and support by:
-  http://www.topnotchthemes.com
+  TROUBLE SHOOTING FAQ
+  Q: My theme settings aren't showing up in the theme config.
+  A: If the Advanced Theme Settings don't show up you most likely made a mistake in Step 4.
+  
+  Q: The Layout Settings fieldset is empty, nothing is showing up!
+  A: You probably have the Devel Themer module enabled, disable the Themer module and the
+     layout settings will appear as per normal.
+  
+  Q: Skinr is not working for blocks.
+  A: If the Skinr styles dont work check if you have the Nodewords module (Metatags) 6.x-1.x,
+     if so upgrade it to the latest version.
+  
+  Q: The custom Panel Layouts are not showing up.
+  A: If the custom Panel Layouts don't show up make sure the Adaptivetheme basetheme is enabled (they 
+     can't work unless the base theme is enabled as well).
+  
+  Q: I set some new defaults in the info file but they are not being recognized.
+  A: If you make changes (any changes) to the theme setting defaults in the .info file you must
+     click "Reset to defaults" for your subtheme otherwise your changes won't be saved to the 
+     database and won't show up.
+  
+  For other issues please see the issue queue first and post a new issue if you still have a problem:
+  http://drupal.org/project/issues/adaptivetheme
 
-* ACQUIA
-  Sponsored by:
-  http://acquia.com
 
-* ARKIKSTUDIO
-  Graphic design by:
-  http://www.arkikstudio.com/
+  For paid support, customizations and theme development please contact:
 
-* UBERCART
-  Inspiration and input from:
-  http://www.ubercart.org/
+  Jeff Burnz
+  Ph: +46 (0)40 693 63 11
+  Mob: +46 (0)709 600 416
+  Skype: jmburnz
+  http://adaptivethemes.com/contact
+  http://drupal.org/user/61393
+
+
+
+

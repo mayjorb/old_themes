@@ -113,7 +113,7 @@ padding:0;
 
 .primary-links li,.secondary-links li {
 display:inline;
-float:left;
+float:right;
 list-style:none;
 margin:0;
 padding:0;
@@ -192,6 +192,9 @@ padding:0;
 #block-locale-0 ul li {
 padding:.35em 0 0;
 }
+
+
+
 
 #block-node-0 .feed-icon img {
 padding:10px 0;
