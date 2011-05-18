@@ -188,7 +188,9 @@ a:focus {}
  *                 Header Elements
  **********************************************************/
 /* #header wraps #branding, #search-box-top and #header-blocks. */
-#header {}
+#header {
+  padding: 20px 0 0 0;
+}
 
 /* #branding wraps #logo, #site-name and #site-slogan. */
 #branding {
